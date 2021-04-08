@@ -9,26 +9,8 @@ require_once 'config/connect.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>products</title>
-    <style>
-        *{
-            text-align: center;
-        }
-        table{
-            margin: 0  auto;
-        }
-        th,td{
-            padding: 10px;
-        }
-
-        th{
-            background-color: purple;
-            color: aqua;
-        }
-        td{
-            background-color: rgb(128, 128, 128);
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="index.css">
+  </head>
 <body>
 <h1>CRUD App</h1>
 <table>
@@ -50,6 +32,7 @@ require_once 'config/connect.php';
     <td><?= $product[1] ?></td>
     <td><?= $product[3] ?></td>
     <td><?= $product[2] ?> $ </td>
+    <td><a href="update.php?id=<?= $product[0] ?>">Update</a></td>
 </tr>
 <?php
          }
