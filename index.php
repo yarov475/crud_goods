@@ -1,5 +1,5 @@
 <?php
-require_once 'connect.php';
+require_once 'config/connect.php';
 ?>
 <!doctype html>
 <html>
@@ -10,6 +10,12 @@ require_once 'connect.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>products</title>
     <style>
+        *{
+            text-align: center;
+        }
+        table{
+            margin: 0  auto;
+        }
         th,td{
             padding: 10px;
         }
@@ -24,6 +30,7 @@ require_once 'connect.php';
     </style>
 </head>
 <body>
+<h1>CRUD App</h1>
 <table>
     <tr>
         <th>ID</th>
@@ -47,9 +54,17 @@ require_once 'connect.php';
 <?php
          }
      ?>
-
-
-
 </table>
+<h2>Add new product</h2>
+<form action="vendor/create.php" method="post">
+    <p>Title</p>
+    <input type="text" name="title">
+    <p>Description</p>
+    <textarea name="Description"></textarea>
+    <p>Price</p>
+    <input type="number" name="price">
+    <br><br>
+    <button type="submit">Add </button>
+</form>
 </body>
 </html>
