@@ -24,7 +24,7 @@ require_once 'connect.php';
     </style>
 </head>
 <body>
-<table>
+
     <tr>
         <th>ID</th>
         <th>Title</th>
@@ -34,24 +34,20 @@ require_once 'connect.php';
 
    <?php
    $products = mysqli_query($connect, "SELECT * FROM `products`");
-   //var_dump($products);
-   $products = mysqli_fetch_all( $products);
-   //print_r( $products);
-   foreach ($products as $product){
-       echo '
-       <tr>
-            <td>' . $product[0].'</td>
-            <td>gitara</td>
-            <td>guitar from gavana</td>
-            <td>1000000$</td>
-     </tr>';
-   }
-
-   ?>
+      $products = mysqli_fetch_all( $products);
+      foreach ($products as $product){
+        ?>
+        <ul>
+            <li><?= $product[0] ?></li>
+            <li><?= $product[1] ?></li>
+            <li><?= $product[3] ?></li>
+            <li><?= $product[2] ?>$</li>
+        </ul>
+            <?php
+                    }
+      ?>
 
 
-
-
-</table>
+        </table>
 </body>
 </html>
