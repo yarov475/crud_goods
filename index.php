@@ -47,5 +47,6 @@ require_once 'config/connect.php';
     <br><br>
     <button type="submit">Add </button>
 </form>
+
 </body>
 </html>
