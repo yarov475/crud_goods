@@ -1,6 +1,5 @@
 <?php
 //print_r($_GET);
-
 require_once 'config/connect.php';
 $product_id = $_GET['id'];
 //print_r($product_id);

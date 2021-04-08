@@ -20,8 +20,6 @@ require_once 'config/connect.php';
         <th>Description</th>
         <th>Price</th>
     </tr>
-
-
 <tr>
     <?php
     $products = mysqli_query($connect, "SELECT * FROM `products`");
@@ -33,9 +31,9 @@ require_once 'config/connect.php';
     <td><?= $product[3] ?></td>
     <td><?= $product[2] ?> $ </td>
     <td><a href="update.php?id=<?= $product[0] ?>">Update</a></td>
+    <td><a href="vendor/delete.php?id=<?= $product[0] ?>">Delete</a></td>
 </tr>
-<?php
-         }
+<?php         }
      ?>
 </table>
 <h2>Add new product</h2>
